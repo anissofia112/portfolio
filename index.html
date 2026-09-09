@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Nur Anis Sofia - Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- CDN Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom Professional Corporate CSS -->
+    <style>
+        /* General Setup - Clean & Readable */
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #555555;
+            line-height: 1.6;
+            background-color: #FFFFFF;
+        }
+        h1, h2, h3, h4, h5, h6 { 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            color: #2C3E50; /* Professional Slate/Navy */
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background-color: #2C3E50; 
+            border-radius: 0;
+            margin-bottom: 0;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar-nav > li > a {
+            color: #FFFFFF !important;
+            font-weight: 600;
+            padding: 15px 20px;
+            transition: 0.3s;
+        }
+        .navbar-nav > li > a:hover {
+            background-color: #0056b3 !important; /* Tech Blue */
+            color: #FFF !important;
+        }
+
+        /* =========================================
+           CLEAN CORPORATE SECTIONS 
+           ========================================= */
+        
+        /* LAYER 1: Home (Light Gray) */
+        #home { 
+            background-color: #F8F9FA; 
+            padding: 120px 0; 
+            border-bottom: 1px solid #EAEAEA;
+        }
+        #home h1 { font-size: 50px; color: #2C3E50; margin-bottom: 10px; }
+        #home h2 { font-size: 20px; color: #0056b3; margin-bottom: 20px; }
+        
+        /* LAYER 2: What I Do (White) */
+        #work { 
+            background-color: #FFFFFF; 
+            padding: 80px 0; 
+        }
+        .media { 
+            margin-top: 30px; 
+            background: #FFFFFF; 
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft drop shadow */
+            border: 1px solid #F0F0F0;
+            transition: 0.3s;
+        }
+        .media:hover { box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); transform: translateY(-3px); }
+        .media-left i { font-size: 40px; color: #0056b3; margin-right: 20px; }
+        
+        /* LAYER 3: About & Skills (Light Gray) */
+        #about { 
+            background-color: #F8F9FA; 
+            padding: 80px 0; 
+            border-top: 1px solid #EAEAEA;
+            border-bottom: 1px solid #EAEAEA;
+        }
+        .services-list span { color: #F39C12; /* Gold stars */ font-size: 20px; letter-spacing: 2px; }
+        
+        /* LAYER 4: Portfolio (White) */
+        #portfolio { 
+            background-color: #FFFFFF; 
+            padding: 80px 0; 
+        }
+        .portfolio-thumb {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #F0F0F0;
+            margin-bottom: 30px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .portfolio-thumb:hover { box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); transform: translateY(-3px); }
+        .portfolio-thumb h4 { color: #0056b3; margin-top: 15px; }
+        
+        /* LAYER 5: Contact (Light Gray) */
+        #contact { 
+            background-color: #F8F9FA; 
+            padding: 80px 0; 
+            border-top: 1px solid #EAEAEA;
+        }
+        .contact-title { font-weight: bold; font-size: 18px; margin-bottom: 20px; color: #2C3E50;}
+        
+        /* Form Styling */
+        .form-control { 
+            margin-bottom: 15px; 
+            border-radius: 4px; 
+            background-color: #FFFFFF;
+            color: #333;
+            border: 1px solid #CCC;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .form-control:focus { border-color: #0056b3; outline: none; box-shadow: 0 0 5px rgba(0,86,179,0.2); }
+        
+        /* Footer */
+        footer {
+            background-color: #2C3E50;
+            color: #EAEAEA;
+            padding: 30px 0;
+        }
+        
+        /* Buttons */
+        .btn-default, input[type="submit"] {
+            background-color: #0056b3; 
+            color: #FFFFFF; 
+            border: none; 
+            padding: 12px 24px; 
+            font-weight: bold; 
+            border-radius: 4px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-default:hover, input[type="submit"]:hover { 
+            background-color: #004494; 
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar" style="background-color:white;"></span>
+            <span class="icon-bar" style="background-color:white;"></span>
+            <span class="icon-bar" style="background-color:white;"></span>                        
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Start Home -->
+    <div id="home" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Welcome to my digital portfolio</h3>
+                    <h1>Nur Anis Sofia</h1>
+                    <h2>IT UNDERGRADUATE &AMP; SOFTWARE DEVELOPER</h2>
+                    <p>Specializing in Cross-Platform & Native Mobile Apps, and Web Database Systems.</p>
+                    <a href="#work" class="btn btn-default">Explore My Work</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Home -->
+
+    <!-- Start Work / What I Do -->
+    <div id="work" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center" style="margin-bottom: 30px;">
+                    <h2>WHAT I DO</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="media">
+                        <div class="media-left"><i class="fa fa-mobile"></i></div>
+                        <div class="media-body">
+                            <h3>MOBILE DEV</h3>
+                            <p>Building offline-first, cross-platform mobile applications using Flutter, Dart, and SQLite, alongside native Android apps using Java and XML layouts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <div class="media-left"><i class="fa fa-database"></i></div>
+                        <div class="media-body">
+                            <h3>WEB SYSTEMS</h3>
+                            <p>Developing robust web applications and relational databases utilizing PHP, MySQL, XAMPP, and implementing role-based access control.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <div class="media-left"><i class="fa fa-desktop"></i></div>
+                        <div class="media-body">
+                            <h3>UI/UX DESIGN</h3>
+                            <p>Designing intuitive user interfaces and wireframes in Figma, and engineering system architectures using UML diagrams and Entity Relationship Diagrams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Work -->
+
+    <!-- Start About -->
+    <div id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>ABOUT ME</h2>
+                    <h4>Nur Anis Sofia Binti Asharun</h4>
+                    <p>I am an undergraduate student currently enrolled in the Bachelor of Information Technology (Hons.) programme at Universiti Teknologi MARA (UiTM). I have a strong foundation in software engineering principles, UI/UX design via Figma, and system modeling using UML.</p>
+                    <p>Whether I am designing offline-first mobile solutions to help students manage their finances or architecting comprehensive web platforms like stock management systems, I am passionate about leveraging technology to build functional, user-centric software.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="sub-title">Technical Skills</h2>
+                    <div class="services-list">
+                        <div>
+                            <h4>Flutter & Dart</h4>
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        </div>
+                        <div>
+                            <h4>PHP & MySQL (XAMPP)</h4>
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        </div>
+                        <div>
+                            <h4>Java & XML (Android)</h4>
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                        </div>
+                        <div>
+                            <h4>Figma & UI/UX Design</h4>
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start Portfolio -->
+    <div id="portfolio" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center" style="margin-bottom: 40px;">
+                    <h2>ACADEMIC & PERSONAL PROJECTS</h2>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="portfolio-thumb">
+                        <img src="images/unisaver.jpg" class="img-responsive" alt="UniSaver App" style="border-radius: 4px; margin-bottom: 15px; width: 100%; height: auto; object-fit: contain;">
+                        <h4>UniSaver App</h4>
+                        <p>An offline-first mobile financial management application developed for undergraduate students. Built with Flutter state logic and an SQLite database for local data persistence.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="portfolio-thumb">
+                        <img src="images/petcare.jpg" class="img-responsive" alt="Pet Care Booking System" style="border-radius: 4px; margin-bottom: 15px; width: 100%; height: auto; object-fit: contain;">
+                        <h4>Pet Care Booking System</h4>
+                        <p>A role-based web portal enabling user bookings and administrator management. Engineered utilizing PHP, MySQL, and customized database queries.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="portfolio-thumb">
+                        <img src="images/bookstock.jpg" class="img-responsive" alt="Book Stock Management" style="border-radius: 4px; margin-bottom: 15px; width: 100%; height: auto; object-fit: contain;">
+                        <h4>Book Stock Management</h4>
+                        <p>A web-based platform built using PHP and MySQL. Features include user authentication, book registration, and secure database record manipulation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+
+    <!-- Start Contact -->
+    <div id="contact" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <address>
+                        <p class="contact-title">GET IN TOUCH</p>
+                        <p><i class="fa fa-phone" style="color: #0056b3; margin-right: 10px;"></i> 010-236 5164</p>
+                        <p><i class="fa fa-envelope-o" style="color: #0056b3; margin-right: 10px;"></i>nuranissofia112@gmail.com</p>
+                        <p><i class="fa fa-map-marker" style="color: #0056b3; margin-right: 10px;"></i> Universiti Teknologi MARA (UiTM) Cawangan Kelantan</p>
+                    </address>
+                </div>
+                <div class="col-md-6">
+                    <!-- Replace the action URL with your unique Formspree link from formspree.io -->
+                    <form role="form" method="POST" action="https://formspree.io/f/mvkovlnj">
+                        <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        <input name="email" type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" class="form-control" id="message" placeholder="Your Message" required></textarea>
+                        <input name="send" type="submit" class="form-control" id="send" value="SEND MESSAGE">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy; 2026 Nur Anis Sofia.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files for responsive navbar -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
