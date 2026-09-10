@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Skyline Weather Forecast</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="weather-page">
+	<main class="weather-shell">
+		<header class="weather-header">
+			<a class="weather-brand" href="index.html" aria-label="Back to portfolio">
+				<span class="brand-mark" aria-hidden="true">+</span>
+				<span>Skyline</span>
+			</a>
+			<div class="header-date" id="header-date">Your local forecast</div>
+		</header>
+
+		<section class="weather-hero" aria-labelledby="weather-title">
+			<div class="hero-copy">
+				<p class="eyebrow">LIVE WEATHER / <span id="last-updated">UPDATING</span></p>
+				<h1 id="weather-title">HI,<br><em>look outside.</em></h1>
+				<p class="hero-summary">A clear view of what the day has in store.</p>
+			</div>
+ 			<form class="location-search" id="location-form">
+				<label for="location-input">Find a location</label>
+				<div class="search-row">
+					<input id="location-input" type="search" placeholder="Search city or town" autocomplete="off">
+					<button type="submit" aria-label="Search location">Search</button>
+				</div>
+				<button class="location-button" type="button" id="use-location">Use my location <span aria-hidden="true">↗</span></button>
+				<p class="search-status" id="search-status" role="status"></p>
+			</form>
+		</section>
+
+		<section class="current-weather" aria-labelledby="current-heading">
+			<div class="current-place">
+				<p class="eyebrow">CURRENTLY IN</p>
+				<h2 id="current-heading">Kuala Lumpur</h2>
+				<p id="current-time">Local time</p>
+			</div>
+			<div class="temperature-block">
+				<span class="weather-symbol" id="current-icon" aria-hidden="true">☀</span>
+				<strong id="current-temp">--°</strong>
+				<div>
+					<p id="current-condition">Loading conditions</p>
+					<p class="feels-like" id="feels-like">Feels like --°</p>
+				</div>
+			</div>
+			<dl class="weather-stats">
+				<div><dt>Humidity</dt><dd id="humidity">--%</dd></div>
+				<div><dt>Wind</dt><dd id="wind">-- km/h</dd></div>
+				<div><dt>Rain chance</dt><dd id="rain-chance">--%</dd></div>
+			</dl>
+		</section>
+
+		<section class="forecast-section" aria-labelledby="forecast-heading">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">THE WEEK AHEAD</p>
+					<h2 id="forecast-heading">Seven day forecast</h2>
+				</div>
+				<span class="units">°C / KMH</span>
+			</div>
+			<div class="forecast-grid" id="forecast-grid" aria-live="polite"></div>
+		</section>
+
+		<footer class="weather-footer">
+			<span>Forecast data by Open-Meteo</span>
+			<a href="index.html">Back to portfolio <span aria-hidden="true">↗</span></a>
+		</footer>
+	</main>
+	<script src="js/weather.js"></script>
+</body>
+</html>
